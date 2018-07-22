@@ -21,3 +21,14 @@ A simple visual effect of grabbing a given sprite and rendering it centered on t
   <img width="512" height="512" src="img/vertigo_state.gif">
 </p>
 
+## Rhythm state
+
+A simplified "guitar hero" like mechanic. First made for my Ludum Dare 41 Compo entry: "Platform Hero".  
+
+This state takes 2 arguments. The first one being an object containing a table with "notes" and a speed.  
+The speed argument controls the speed of the notes moving through the screen, and the notes argument contains a table with N numbers. This numbers can be 0, 1, 2 or 3, meaning _left_, _right_, _up_ and _down_ respectively.
+
+<p align="center">
+  <img width="512" height="512" src="img/rhythm_state.gif">
+</p>
+

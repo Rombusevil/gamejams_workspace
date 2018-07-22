@@ -6,20 +6,26 @@ __lua__
 ------------------------- start imports
 --<*sff/entity.lua
 --<*sff/tutils.lua
+--<*sff/collision.lua
 -- --<*sff/timer.lua
---  --<*sff/collision.lua
 --  --<*sff/explosions.lua
 --  --<*sff/buttons.lua
 
 --<*cabin_state.lua
 --<*vertigo_state.lua
+--<*rhythm_state.lua
 --------------------------- end imports
 
 -- to enable mouse support uncomment all of the following commented lines:
 -- poke(0x5f2d, 1) -- enables mouse support
 function _init()
     --curstate=haunted_state()
-    curstate=cabin_state()
+    --curstate=cabin_state()
+    
+    local musheet={} -- music sheet
+    musheet.notes={0,3,0,0,1,2} -- 0 left, 1 right, 2 up, 3 down
+    musheet.speed=1.5
+    curstate=rhythm_state(musheet, cabin_state())
 end
 
 function _update()

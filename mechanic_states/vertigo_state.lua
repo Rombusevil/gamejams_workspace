@@ -12,7 +12,6 @@ function vertigo_state(prev_state)
     
     s.update=function()
         ctr+=0.1
-        printh(ctr-prevCtr)
         if( (flr(ctr)%3)==0 )then
             -- prevent insane flashing
             if ctr-prevCtr > 1 then
