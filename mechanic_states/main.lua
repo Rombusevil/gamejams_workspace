@@ -14,6 +14,7 @@ __lua__
 --<*cabin_state.lua
 --<*vertigo_state.lua
 --<*rhythm_state.lua
+--<*sidescroller_state.lua
 --------------------------- end imports
 
 -- to enable mouse support uncomment all of the following commented lines:
@@ -22,10 +23,12 @@ function _init()
     --curstate=haunted_state()
     --curstate=cabin_state()
     
-    local musheet={} -- music sheet
-    musheet.notes={0,3,0,0,1,2} -- 0 left, 1 right, 2 up, 3 down
-    musheet.speed=1.5
-    curstate=rhythm_state(musheet, cabin_state())
+    --local musheet={} -- music sheet
+    --musheet.notes={0,3,0,0,1,2} -- 0 left, 1 right, 2 up, 3 down
+    --musheet.speed=1.5
+    --curstate=rhythm_state(musheet, cabin_state())
+
+    curstate=sidescroller_state()
 end
 
 function _update()
